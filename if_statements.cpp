@@ -17,7 +17,7 @@ using namespace std;
 
 /*
  * Main Program
- * Description: <describe what main program does>
+ * Description: This program will determine a numbers statistics (positive, negative, even, or odd).
  */
 int main( ) {
 
