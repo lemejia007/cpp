@@ -84,6 +84,7 @@ int main() {
       // 4. Use if/if else statements here to calculate the areas of the shapes [119]
       //    Don't forget to handle invalid entries
       if(selection == '1') {
+          cout << fixed << setprecision(2) << endl;
           cout << "Enter the Triangle's base" << endl;
           cin >> base;
           cout << "Enter the Triangle's height" << endl;
@@ -95,6 +96,7 @@ int main() {
           cout << "Height = " << height << endl; 
           cout << "Area = " << area << endl;
       } else if(selection == '2') {
+          cout << fixed << setprecision(2) << endl;
           cout << "Enter the Square's side" << endl;
           cin >> side;
           area = side * side; 
@@ -103,6 +105,7 @@ int main() {
           cout << "Side = " << side << endl;
           cout << "Area = " << area << endl;
       } else if(selection == '3') {
+          cout << fixed << setprecision(2) << endl;
           cout << "Enter the Triangle's length" << endl;
           cin >> length; 
           cout << "Enter the Rectangle's's width" << endl;
@@ -114,6 +117,7 @@ int main() {
           cout << "Width = " << width << endl; 
           cout << "Area = " << area << endl;
       } else if(selection == '4') {
+          cout << fixed << setprecision(2) << endl;
           cout << "Enter the Circle's radius" << endl;
           cin >> radius;
           area = M_PI * pow(radius, 2); 
@@ -123,6 +127,7 @@ int main() {
           cout << "Diameter = " << (radius * 2) << endl; 
           cout << "Area = " << area << endl;
       } else if(selection == '5') {
+          cout << fixed << setprecision(2) << endl;
           cout << "Enter the Ellipse's Major radius" << endl;
           cin >> sideA;
           cout << "Enter the Ellipse's Minor radius" << endl;
