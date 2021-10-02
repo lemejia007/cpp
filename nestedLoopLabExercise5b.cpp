@@ -10,6 +10,7 @@
 
 /* Place Library References Here */
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -31,26 +32,23 @@ int main() {
   // Begin while loop
   while(n >= MIN && n <= MAX) {
       
-    // Obtain new n
+    // Obtain n
     cin >> n;
 
-    // Break out of loop if n is less than min or greater than max
+    // Notify user if out of range
     if(n < MIN || n > MAX) {
       cout << "Your number is out of range." << endl;
-      break;
     }
 
-    // Challenge
-    // cout << n << "|";
-
+    // Set output format
+    cout << setw(3) << n << "|";
+    
     for(int i = 1; i <= n; i++) {
       cout << SYMBOL;
     }
 
     cout << endl;
   }
-
-
   
   return 0;
 }
