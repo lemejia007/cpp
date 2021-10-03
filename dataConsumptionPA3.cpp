@@ -127,7 +127,7 @@ int main() {
     } 
 
     // Display totals
-    cout << left << setw(20) << "\nNormal Customers:"     << right << setw(10) << normalCustomers                   
+    cout << left << setw(20) << "\nNormal Customers:"     << right << setw(11) << normalCustomers                   
          << endl;
     cout << left << setw(20) << "Retiree Customers:"    << right << setw(10) << retireeCustomers                  
          << endl;
