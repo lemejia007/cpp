@@ -36,7 +36,7 @@ int main() {
     const double STUDENT_DISCOUNT     = 0.20;     // discount for a student customer 
     
     // Declare program variables
-    string customerID                 = "111111"; // customer's identification number
+    string customerID;                            // customer's identification number
     char   customerStatus;                        // 'n'(normal), 'r'(retiree), 's'(student)
     int    normalCustomers            = 0;        // total number of normal customers
     int    retireeCustomers           = 0;        // total number of retiree customers
@@ -127,7 +127,7 @@ int main() {
     } 
 
     // Display totals
-    cout << left << setw(20) << "Normal Customers:"     << right << setw(10) << normalCustomers                   
+    cout << left << setw(20) << "\nNormal Customers:"     << right << setw(10) << normalCustomers                   
          << endl;
     cout << left << setw(20) << "Retiree Customers:"    << right << setw(10) << retireeCustomers                  
          << endl;
