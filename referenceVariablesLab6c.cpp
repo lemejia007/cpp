@@ -137,8 +137,8 @@ void swap(double &a, double &b) {
   cout << "Swapping double values passed into the function by reference." << endl;
   double aValue = a;
   double bValue = b;
-  a = aValue;
-  b = bValue;
+  a = bValue;
+  b = aValue;
 }
 
 /*
