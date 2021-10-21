@@ -88,7 +88,7 @@ int main() {
     }
 
     // ??? Output the number of grades and the average score.
-    cout << fixed << showpoint << setprecision(2);
+    cout << fixed << showpoint << setprecision(1);
     cout << "\nThere was a total number of " 
          << counter 
          << " grades read.\nThe average score for grades was " 
@@ -100,7 +100,7 @@ int main() {
     highest(grades, counter);
 
     // Output the lowest grades
-    highest(grades, counter);
+    lowest(grades, counter);
 
   }
   else {
