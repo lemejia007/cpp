@@ -1,0 +1,27 @@
+1. Create file stream object
+
+2. Get file to open from user
+   - open file
+
+3. 
+
+  a)
+    If file opens successfully 
+
+        - define arrays (one per column in file)
+        - skip first line in file because it is all string text
+        - Read file into appropriate arrays
+
+        - Output busiestAirline()
+        - Output safestAirline()
+        - Output leastSafeAirline()
+        - Ouput averageNumFatalities
+
+        - close file
+
+        - return 0
+  
+  b) If file fails to open 
+
+        - Notify user about failed attempt
+        - return 1
