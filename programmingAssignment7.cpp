@@ -20,9 +20,6 @@ using namespace std;
 /********************************************************
  *                  Global Constants 
 */
-// Constant for supported password characters
-const string CHARS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; 
-
 // Constant for file containing common passwords
 const string COMMON_PASSWORDS = "commonPasswords.dat"; 
 
@@ -166,6 +163,7 @@ int binarySearch(const string* array, int count, string userInput) {
  *                password.
  * 
  * Parameters:    A string value
+ *                Pool size
 */
 int calculateEntropy(string userInput, int poolSize) {
 
@@ -190,9 +188,9 @@ int calculateEntropy(string userInput, int poolSize) {
 */
 void displayPasswordStrength(string userInput, int entropy) {
 
-  if(entropy <= 25)
+  if(entropy < 28)
     cout << "Password " << "'" << userInput << "'" << " stength is: Very Weak" << endl;
-  else if(entropy >= 26 && entropy <= 35)
+  else if(entropy >= 28 && entropy <= 35)
     cout << "Password " << "'" << userInput << "'" << " stength is: Weak" << endl;
   else if(entropy >= 36 && entropy <= 59)
     cout << "Password " << "'" << userInput << "'" << " stength is: Reasonable" << endl;
