@@ -207,7 +207,12 @@ int main() {
              << " in common passwords list." << endl
              << "Try a more unique password." << endl;
       } 
-    else { // Password is not a common password
+      else if(userPassword == "") {
+
+        // Notify user that blank is not valid
+        cout << "You did not eneter a password. Please try again." << endl;
+
+      } else { // Password is not a common password
 
         // Calculate password entropy and display strength rating
         displayPasswordStrength(userPassword, calculateEntropy(userPassword, 94));
