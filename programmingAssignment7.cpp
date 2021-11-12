@@ -66,33 +66,6 @@ void readData(ifstream &input, string* array, int size) {
 
 }
 
-/* Function name: sortArray()
- * Description:   Sorts the data in an array in ascending order.
- *
- * Parameters:    Pointer to a string array
- *                Size of array
- */
-void sortArray(string* array, int size)
-{
-  int    minIndex;
-  string minValue;
-
-  for (int start = 0; start < (size - 1); start++)
-    {
-      minIndex = start;
-      minValue = array[start];
-      for (int index = start + 1; index < size; index++)
-	{
-	  if (array[index] < minValue)
-	    {
-	      minValue = array[index];
-	      minIndex = index;
-	    }
-	}
-      swap(array[minIndex], array[start]);
-    }
-}
-
 /*
  * Function Name: getUserPassword()
  * Description:   Propmt the user to enetr a password to test and 
@@ -115,46 +88,30 @@ string getUserPassword() {
   return password;
 }
 
-/* Function name: binarySearch(recursive)
- * Description:   Returns the position of the search key in the 
-                  array or returns -1 if not found;
+/* 
+ * Function name: linearSearch
+ * Description:   Looks for and returns the position of the search value 
+ *                in the array. Returns -1 if not found.
  * 
- * Parameters:    Pointer to a string array
+ * Parameters:    String array
  *                Size of array
- *                User input
+ *                Search value (user input)
  */
-int binarySearch(const string* array, int start, int end, string userInput) {
-  
-  int middle = (start + end) / 2;
-  if (end < start)
-    return -1;
+int linearSearch(string* array, int count, string userInput) {
 
-  if (userInput == array[middle])
-    return middle;
+  int index = 0;      // Used as a subscript to search the array
+  int position = -1;  // To record the position of search value
+  bool found = false; // Flag to indicate if value was found
 
-  if (userInput < array[middle])
-    return binarySearch(array, start, middle - 1, userInput);
+  while (index < count && !found) {
 
-  else
-    return binarySearch(array, middle + 1, end, userInput);
-
-}
-
-/* Function name: binarySearch()
- * Description:   This is the binary search function header that 
- *                matches the linear search header. It imediately 
- *                calls the recursive binarysearch function to do 
- *                the the actual searching.
- * 
- * Parameters:    Pointer to a string array
- *                Size of array
- *                Value to be searched
- */
-int binarySearch(const string* array, int count, string userInput) {
-  
-  // Formulate a call to the recursive bniary search function
-  return binarySearch(array, 0, count-1, userInput);
-  
+    if (array[index] == userInput) { // If the value is found
+      found = true; // Set the flag
+      position = index; // Record the value's subscript
+    }
+    index++; // Go to the next element
+  }
+  return position; // Return the position, or -1
 }
 
 /*
@@ -234,9 +191,6 @@ int main() {
     // Close input file
     inputFile.close();
 
-    // Sort the data in ascending order
-    sortArray(commonPasswordsArr, count);
-
     // Ask user for a password to test and store in userPassword
     string userPassword; 
     userPassword = getUserPassword(); 
@@ -244,7 +198,7 @@ int main() {
     while(userPassword != "quit") { // While user does not wish to exit the program
 
       // Compare user input with values stored in common passwords array
-      int position = binarySearch(commonPasswordsArr, count, userPassword); 
+      int position = linearSearch(commonPasswordsArr, count, userPassword); 
 
       if(position >= 0) { // User password is a common passwords
 
