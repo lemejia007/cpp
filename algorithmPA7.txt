@@ -16,7 +16,7 @@
             - close file
         
         d. compare user input value with values stored in common passwords array
-            - perform a binary search
+            - linear search
         
         f. if user value is a value found in common passwords array
             - display position of value in common passwords array
