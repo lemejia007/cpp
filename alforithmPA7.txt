@@ -1,0 +1,44 @@
+1. create file stream object
+    - open commonPasswords.dat
+
+2. If file opens
+
+    A. ask user for password to test
+        - store user input
+
+    B. while user input != 'quit'
+
+        a. read the first value in file into size variable for common passwords array initialization 
+        
+        b.  dynamically create an array to hold common passwords
+        
+        c.  read common passwords from commonPasswords.dat file into common passwords array
+            - close file
+        
+        d. compare user input value with values stored in common passwords array
+            - perform a binary search
+        
+        f. if user value is a value found in common passwords array
+            - display position of value in common passwords array
+            - notify user
+            - prompt user to enter a new password value to compare
+        
+        g. else if password is not found in common (-1 is returned)
+            - calculatePasswordEntropy();
+              l = userInput.length();
+              r = 94;
+            - outputPasswordStrengthRating();
+              if
+                entropy < 25   bits --> very weak
+                entropy 28-35  bits --> weak
+                entropy 35-59  bits --> reasonable
+                entropy 60-127 bits --> strong
+                entropy 128+   bits --> very strong
+
+3. else file could not open
+    - notify user file failed to open
+    - exit failure
+
+4. notify end of program
+    - return 0;
+          
