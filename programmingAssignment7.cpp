@@ -53,7 +53,7 @@ string* createArray(int size) {
  * Function name: readData()
  *
  * Description:   Read data from the specified stream object and read 
- *                the data from te object nto the array.
+ *                the data from tHe object into the array.
  *
  * Parameters:    Open stream object
  *                Pointer to a string array
