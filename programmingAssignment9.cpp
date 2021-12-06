@@ -1,5 +1,5 @@
 
-/*
+/********************************************************
  * CLASS ID: CIS/CSC-5-48639/48683
  *
  * STUDENT:    Luis Mejia
@@ -8,8 +8,9 @@
  *
  */
 
-/* Place Library References Here */
-
+/********************************************************
+ *                 Library References 
+*/
 #include <cstdlib>
 #include <iostream>
 #include <iomanip>
@@ -71,7 +72,8 @@ Status getCurrentMode(ThermState* therm) {
 void setSetTemperature(float temp, ThermState* therm) { 
   float validTemp;
   validTemp = temp;
-  if(validTemp < TEMP_MIN || validTemp > TEMP_MAX) {
+  // Validate user input for temperature
+  while(validTemp < TEMP_MIN || validTemp > TEMP_MAX) {
     cout << "\nPlease eneter a temperature between " << TEMP_MIN << " and " << TEMP_MAX << endl;
     cin >> validTemp;
   }
