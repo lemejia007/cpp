@@ -1,0 +1,18 @@
+1) implement function prototypes
+    - include pointers in function implementation to allow access to structure
+2) instantiate a new structure 
+    - create pointer pointing to new structure
+3) display menu to user
+    - store user selection
+    - validate user selection
+4) while user does not quit program
+    - create temperature variable
+    - switch case
+        case 1 - setMode()
+        case 2 - setMode()
+        case 3 - setMode()
+        case 4 - setSetTemperature()
+        case 5 - showStatus()
+        case 6 - reset()
+5) ask user for another task
+    - validate user input
