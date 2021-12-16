@@ -1,0 +1,45 @@
+a) implement function prototypes
+    - include pointers in function implementation to allow access to structure
+b) instantiate a new structure 
+    - create pointer pointing to new structure
+c) display menu to user
+    - store user selection
+    - validate user selection
+d) while user does not quit program
+    - create temperature variable
+    - switch case
+        case 1 - setMode()
+        case 2 - setMode()
+        case 3 - setMode()
+        case 4 - setSetTemperature()
+        case 5 - showStatus()
+        case 6 - reset()
+e) ask user for another task
+    - validate user input
+
+Part 2 (Moving everything into a class)
+
+1)  - create a class named Thermostat
+    - create new file with ".h" extension
+    - define public enums first 
+    (allowing class members access to them)
+
+    - define private class members including structure and pointer
+    (allowing public class members access to them)
+
+    - define public class members
+
+2)  - create an implementation file
+    - make a new file with ".cpp" extension
+    - create a default and overloaded Thermostat() constructor 
+     (where overloaded constructor allows user to set temperature and mode)
+    
+    - implement/ transition ThermState structure functions to Thermostat class functions
+       (using scope resolution operator to extend our class) 
+
+    - include class specification file header 
+
+3)  - include class specification file header in main.cpp
+    - instantiate dynamic class object 
+    - follow same program procedures as PA 9 calling functions on class object and not struct 
+    - delete dynamic class object
